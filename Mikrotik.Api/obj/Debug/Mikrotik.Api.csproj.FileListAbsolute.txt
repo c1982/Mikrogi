@@ -1,0 +1,10 @@
+O:\Projects\Mikrogi\Mikrogi\bin\Debug\Mikrotik.Api.dll
+O:\Projects\Mikrogi\Mikrogi\bin\Debug\Mikrotik.Api.pdb
+O:\Projects\Mikrogi\Mikrogi\obj\Debug\ResolveAssemblyReference.cache
+O:\Projects\Mikrogi\Mikrogi\obj\Debug\Mikrotik.Api.dll
+O:\Projects\Mikrogi\Mikrogi\obj\Debug\Mikrotik.Api.pdb
+O:\Projects\Mikrogi\Mikrotik.Api\bin\Debug\Mikrotik.Api.dll
+O:\Projects\Mikrogi\Mikrotik.Api\bin\Debug\Mikrotik.Api.pdb
+O:\Projects\Mikrogi\Mikrotik.Api\obj\Debug\ResolveAssemblyReference.cache
+O:\Projects\Mikrogi\Mikrotik.Api\obj\Debug\Mikrotik.Api.dll
+O:\Projects\Mikrogi\Mikrotik.Api\obj\Debug\Mikrotik.Api.pdb

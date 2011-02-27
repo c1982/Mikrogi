@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Usage", "Test\Usage.csproj", "{FE976490-80BF-4FDD-A52D-A0E26BA399DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mikrotik.Api", "Mikrotik.Api\Mikrotik.Api.csproj", "{98D76AEA-66C7-4ABE-A4A1-296E606A5FFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE976490-80BF-4FDD-A52D-A0E26BA399DC}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{FE976490-80BF-4FDD-A52D-A0E26BA399DC}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{FE976490-80BF-4FDD-A52D-A0E26BA399DC}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{FE976490-80BF-4FDD-A52D-A0E26BA399DC}.Debug|x86.ActiveCfg = Debug|x86
+		{FE976490-80BF-4FDD-A52D-A0E26BA399DC}.Debug|x86.Build.0 = Debug|x86
+		{FE976490-80BF-4FDD-A52D-A0E26BA399DC}.Release|Any CPU.ActiveCfg = Release|x86
+		{FE976490-80BF-4FDD-A52D-A0E26BA399DC}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{FE976490-80BF-4FDD-A52D-A0E26BA399DC}.Release|Mixed Platforms.Build.0 = Release|x86
+		{FE976490-80BF-4FDD-A52D-A0E26BA399DC}.Release|x86.ActiveCfg = Release|x86
+		{FE976490-80BF-4FDD-A52D-A0E26BA399DC}.Release|x86.Build.0 = Release|x86
+		{98D76AEA-66C7-4ABE-A4A1-296E606A5FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98D76AEA-66C7-4ABE-A4A1-296E606A5FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98D76AEA-66C7-4ABE-A4A1-296E606A5FFD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{98D76AEA-66C7-4ABE-A4A1-296E606A5FFD}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{98D76AEA-66C7-4ABE-A4A1-296E606A5FFD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{98D76AEA-66C7-4ABE-A4A1-296E606A5FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98D76AEA-66C7-4ABE-A4A1-296E606A5FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98D76AEA-66C7-4ABE-A4A1-296E606A5FFD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{98D76AEA-66C7-4ABE-A4A1-296E606A5FFD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{98D76AEA-66C7-4ABE-A4A1-296E606A5FFD}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

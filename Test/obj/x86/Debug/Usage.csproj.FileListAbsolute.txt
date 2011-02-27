@@ -1,0 +1,7 @@
+O:\Projects\Mikrogi\Test\bin\Debug\Usage.exe
+O:\Projects\Mikrogi\Test\bin\Debug\Usage.pdb
+O:\Projects\Mikrogi\Test\bin\Debug\Mikrotik.Api.dll
+O:\Projects\Mikrogi\Test\bin\Debug\Mikrotik.Api.pdb
+O:\Projects\Mikrogi\Test\obj\x86\Debug\ResolveAssemblyReference.cache
+O:\Projects\Mikrogi\Test\obj\x86\Debug\Usage.exe
+O:\Projects\Mikrogi\Test\obj\x86\Debug\Usage.pdb
