@@ -6,8 +6,7 @@ using System.Text;
 namespace Mikrotik.Api
 {
     public interface IFirewall
-    {
-        IFirewall Connect(string mikrotikIp, string userName, string Password, int mikrotikPort = 8728);
+    {        
         IFirewall Drop();
         IFirewall Accept();
         IFirewall Jump(Targets jumpTarget);        
@@ -21,10 +20,8 @@ namespace Mikrotik.Api
         Response Apply();
     }
 
-    public class Firewall : IDisposable, IFirewall
+    public class Firewall : Connectivity, IFirewall
     {
-        private MK mikrotik;
-
         private Actions _action;
         private string _sourceIp;
         private string _destinationIp;
@@ -34,6 +31,13 @@ namespace Mikrotik.Api
         private Targets _jumpTarget;
         private Protocols _protocol;
         private Targets _chain;
+
+
+        public Firewall(string mikrotikIp, string userName, string password, int port = 8728) : 
+            base(mikrotikIp, userName, password, port)
+        {
+
+        }
 
         public IFirewall Drop()
         {
@@ -87,59 +91,35 @@ namespace Mikrotik.Api
             return this;
         }
 
-        public Response Apply()
-        {
-            mikrotik.Send("/ip/firewall/filter/add");
-            mikrotik.Send(String.Format("=action={0}", _action));
-            mikrotik.Send(String.Format("=chain={0}", _chain));
-
-            if(_destinationPort != 0)
-                mikrotik.Send(String.Format("=dst-port={0}", _destinationPort));            
-            
-            mikrotik.Send(String.Format("=protocol={0}",_protocol));
-
-            if(!String.IsNullOrEmpty(_sourceIp))
-                mikrotik.Send(String.Format("=src-address={0}", _sourceIp));
-
-            mikrotik.Send(".tag=firewall", true);
-
-            var message = readResponse();
-
-            return new Response() { Status = true, Message = message };
-        }
-
-        public IFirewall Connect(string mikrotikIp, string userName, string Password, int mikrotikPort = 8728)
-        {
-            mikrotik = new MK(mikrotikIp, mikrotikPort);
-            if (!mikrotik.Login(userName, Password))
-                throw new System.Exception("Login incorrect!");
-            
-            return this;
-        }
-
         public IFirewall Chain(Targets chain)
         {
             this._chain = chain;
             return this;
         }
 
-        public void Dispose()
+        public Response Apply()
         {
-            mikrotik.Close();
+            Command("/ip/firewall/filter/add");
+            Command(String.Format("=action={0}", _action));
+            Command(String.Format("=chain={0}", _chain));
+            Command(String.Format("=protocol={0}", _protocol));
+            Command(String.Format("=comment={0}", _comment));
+
+            if (_destinationPort != 0)
+                Command(String.Format("=dst-port={0}", _destinationPort));
+
+            if (_sourcePort != 0)
+                Command(String.Format("=src-port={0}", _sourcePort));
+
+            if (!String.IsNullOrEmpty(_sourceIp))
+                Command(String.Format("=src-address={0}", _sourceIp));
+
+            if (!String.IsNullOrEmpty(_destinationIp))
+                Command(String.Format("=dst-address={0}", _destinationIp));
+
+            var _response = EndCommand(".tag=firewall");
+
+            return _response;
         }
-
-        #region Privates
-        private string readResponse()
-        {
-            StringBuilder sbuilt = new StringBuilder();
-
-            foreach (string h in mikrotik.Read())
-            {
-                sbuilt.AppendLine(h);
-            }
-
-            return sbuilt.ToString();
-        }
-        #endregion
     }
 }

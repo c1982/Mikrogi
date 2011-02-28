@@ -42,12 +42,15 @@
   <ItemGroup>
     <Compile Include="Actions.cs" />
     <Compile Include="Chains.cs" />
+    <Compile Include="Connectivity.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="Firewall.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Protocols.cs" />
     <Compile Include="Response.cs" />
+    <Compile Include="RouterOs.cs" />
     <Compile Include="Targets.cs" />
+    <Compile Include="Users.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
